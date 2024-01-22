@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/open_nav_CL"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/search_IB"
+        android:layout_width="@dimen/dimens_22dp"
+        android:layout_height="@dimen/dimens_22dp"
+        android:layout_marginStart="@dimen/dimens_5dp"
+        android:layout_marginTop="@dimen/dimens_35dp"
+        android:background="@color/transparent"
+        android:focusable="false"
+        android:nextFocusLeft="@id/search_IB"
+        android:nextFocusUp="@id/search_IB"
+        android:nextFocusDown="@id/live_IB"
+        android:tag="Search"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/live_IB"
+        app:srcCompat="@drawable/ic_profile_unselected" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/live_IB"
+        android:layout_width="@dimen/dimens_22dp"
+        android:layout_height="@dimen/dimens_22dp"
+        android:layout_marginStart="@dimen/dimens_5dp"
+        android:layout_marginTop="@dimen/dimens_35dp"
+        android:background="@color/transparent"
+        android:focusable="false"
+        android:nextFocusLeft="@id/live_IB"
+        android:nextFocusUp="@id/search_IB"
+        android:nextFocusDown="@id/songs_IB"
+        android:tag="@string/Home"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search_IB"
+        app:layout_constraintBottom_toTopOf="@+id/songs_IB"
+        app:srcCompat="@drawable/ic_live_tv_unselected" />
+
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/songs_IB"
+        android:layout_width="@dimen/dimens_22dp"
+        android:layout_height="@dimen/dimens_22dp"
+        android:layout_marginStart="@dimen/dimens_5dp"
+        android:layout_marginTop="@dimen/dimens_35dp"
+        android:background="@color/transparent"
+        android:focusable="false"
+        android:nextFocusLeft="@id/songs_IB"
+        android:nextFocusUp="@id/live_IB"
+        android:nextFocusDown="@id/artists_IB"
+        android:tag="@string/PodCasts"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/live_IB"
+        app:layout_constraintBottom_toTopOf="@+id/artists_IB"
+        app:srcCompat="@drawable/ic_home_unselected" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/artists_IB"
+        android:layout_width="@dimen/dimens_22dp"
+        android:layout_height="@dimen/dimens_22dp"
+        android:layout_marginStart="@dimen/dimens_5dp"
+        android:layout_marginTop="@dimen/dimens_35dp"
+        android:background="@color/transparent"
+        android:focusable="false"
+        android:nextFocusLeft="@id/artists_IB"
+        android:nextFocusUp="@id/songs_IB"
+        android:nextFocusDown="@id/podcasts_IB"
+        android:tag="@string/Movies"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/songs_IB"
+        app:layout_constraintBottom_toTopOf="@+id/podcasts_IB"
+        app:srcCompat="@drawable/ic_movie_unselected" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/podcasts_IB"
+        android:layout_width="@dimen/dimens_22dp"
+        android:layout_height="@dimen/dimens_22dp"
+        android:layout_marginStart="@dimen/dimens_5dp"
+        android:layout_marginTop="@dimen/dimens_35dp"
+        android:background="@color/transparent"
+        android:focusable="false"
+        android:nextFocusLeft="@id/podcasts_IB"
+        android:nextFocusUp="@id/artists_IB"
+        android:nextFocusDown="@id/settings_IB"
+        android:tag="@string/Movies"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/artists_IB"
+        app:layout_constraintBottom_toTopOf="@+id/settings_IB"
+        app:srcCompat="@drawable/ic_onrent_unselected" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/settings_IB"
+        android:layout_width="@dimen/dimens_22dp"
+        android:layout_height="@dimen/dimens_22dp"
+        android:layout_marginStart="@dimen/dimens_5dp"
+        android:layout_marginTop="@dimen/dimens_35dp"
+        android:background="@color/transparent"
+        android:focusable="false"
+        android:nextFocusLeft="@id/settings_IB"
+        android:nextFocusUp="@id/podcasts_IB"
+        android:nextFocusDown="@id/settings_IB"
+        android:tag="@string/Settings"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/podcasts_IB"
+        app:srcCompat="@drawable/ic_setting_unselected" />
+
+    <TextView
+        android:id="@+id/settings_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimens_17dp"
+        android:text="@string/About"
+        android:paddingBottom="@dimen/dimens_5dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dimens_20sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/settings_IB"
+        app:layout_constraintStart_toEndOf="@id/settings_IB"
+        app:layout_constraintTop_toTopOf="@id/settings_IB" />
+
+    <TextView
+        android:id="@+id/podcasts_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimens_17dp"
+        android:text="@string/PodCasts"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dimens_20sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/podcasts_IB"
+        app:layout_constraintStart_toEndOf="@id/podcasts_IB"
+        app:layout_constraintTop_toTopOf="@id/podcasts_IB" />
+
+
+    <TextView
+        android:id="@+id/artists_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimens_17dp"
+        android:text="@string/Artists"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dimens_20sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/artists_IB"
+        app:layout_constraintStart_toEndOf="@id/artists_IB"
+        app:layout_constraintTop_toTopOf="@id/artists_IB" />
+
+    <TextView
+        android:id="@+id/songs_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimens_17dp"
+        android:text="@string/live"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dimens_20sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/songs_IB"
+        app:layout_constraintStart_toEndOf="@id/songs_IB"
+        app:layout_constraintTop_toTopOf="@id/songs_IB" />
+
+    <TextView
+        android:id="@+id/live_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimens_17dp"
+        android:text="@string/live"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dimens_20sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/live_IB"
+        app:layout_constraintStart_toEndOf="@id/live_IB"
+        app:layout_constraintTop_toTopOf="@id/live_IB" />
+
+    <TextView
+        android:id="@+id/search_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimens_17dp"
+        android:text="@string/search"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dimens_20sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/search_IB"
+        app:layout_constraintStart_toEndOf="@id/search_IB"
+        app:layout_constraintTop_toTopOf="@id/search_IB" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
